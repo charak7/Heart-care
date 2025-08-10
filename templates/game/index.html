@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snake - Simple Web Game</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+  <main class="container">
+    <h1>Snake</h1>
+    <canvas id="game-canvas" width="480" height="480" aria-label="Snake game area" role="img"></canvas>
+
+    <section class="hud">
+      <div class="scoreboard">
+        <span>Score:</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="controls">
+        <button id="btn-start" class="primary">Start</button>
+        <button id="btn-pause">Pause</button>
+        <button id="btn-restart">Restart</button>
+      </div>
+    </section>
+
+    <details class="help">
+      <summary>How to play</summary>
+      <ul>
+        <li>Use Arrow keys or WASD to move.</li>
+        <li>Eat the food to grow and score points.</li>
+        <li>Avoid colliding with walls or yourself.</li>
+        <li>Press Space to pause/resume.</li>
+      </ul>
+    </details>
+  </main>
+
+  <script src="{% static 'game.js' %}"></script>
+</body>
+</html>
